@@ -1,13 +1,91 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    background: #F55A5A;
+    height: 60px;
+}
+
+header p {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 15px;
+}
+
+.article-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px 15px;
+    gap: 19px;
+}
+
+.article-container img {
+    width: 125px;
+    height: 168px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.article-container .content div {
+    display: flex;
+    align-items: center;
+}
+
+.article-container .content div .icon {
+    color: #F55A5A;
+    margin-right: 4px;
+    font-size: 10px;
+}
+
+.article-container .content div .country {
+    font-size: 10px;
+    letter-spacing: 0.17em;
+    margin-right: 12px;
+}
+
+.article-container .content div a {
+    font-size: 10px;
+    color: #918E9B;
+}
+
+.article-container .content .location {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 4px;
+}
+
+.article-container .content .date {
+    font-size: 10px;
+    margin-top: 14px;
+}
+
+.article-container .content .description {
+    font-size: 10px;
+    line-height: 150%;
+    margin-top: 9px;
+}
+
+.article hr {
+    margin-inline: 40px;
+    opacity: 0.3;
 }

@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './index.css'
+import Header from './components/Header'
+import Article from './components/Article'
+import articleData from './data'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default function App(){
+  const article = articleData.map(item => {
+    return(
+      <div className='article'>
+        <Article
+        key = {item.id}
+        {...item}
+      />
+      {item.id !== articleData.length && <hr/>}
+      </div>      
+    )
+  })
+  return(
+    <div>
+      <Header />
+      <main>
+        {article}
+      </main>
     </div>
-  );
+  )
 }
-
-export default App;
